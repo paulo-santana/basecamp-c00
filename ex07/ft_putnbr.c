@@ -6,7 +6,7 @@
 /*   By: psergio- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/01 14:44:33 by psergio-          #+#    #+#             */
-/*   Updated: 2021/04/03 22:26:49 by psergio-         ###   ########.fr       */
+/*   Updated: 2021/04/04 02:25:44 by psergio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,12 @@ void	ft_putnbr(int nb)
 		{
 			is_min = 1;
 			nb = -2147483647;
-		}	
+		}
 		nb *= -1;
 	}
-
 	digit = nb % 10 + '0' + is_min;
 	nb = nb / 10;
-
 	if (nb > 0)
 		ft_putnbr(nb);
-
-	write(1, &digit, 1);	
+	write(1, &digit, 1);
 }
